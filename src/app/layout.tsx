@@ -12,6 +12,7 @@ const domineSerif = Domine({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
   title: "James Beston",
   description: "The personal website of James Beston, a Full-Stack Developer and Procrastinator.",
@@ -27,9 +28,10 @@ export default function RootLayout({
       <body
         className={`${hubotSans.variable} ${domineSerif.variable} antialiased`}
       >
-        <div className="min-h-screen w-screen bg-graphpaper">
+        <div className="min-h-screen w-screen">
           {children}
         </div>
+        <div className="bg-graphpaper absolute inset-0 z-[-1]"></div>  
       </body>
     </html>
   );
